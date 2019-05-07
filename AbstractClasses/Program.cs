@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AbstractClasses
 {
@@ -10,30 +6,73 @@ namespace AbstractClasses
     {
         static void Main(string[] args)
         {
-            FullTimeEmp fte = new FullTimeEmp()
+
+            CorporateCustomer CC = new CorporateCustomer();
+            Console.WriteLine(CC.ID);
+
+            SavingCustomer SC = new SavingCustomer();
+            Console.WriteLine(SC.ID);
+
+            Console.ReadKey();
+
+            //FullTimeEmp fte = new FullTimeEmp()
+            //{
+            //    ID = 1,
+            //    FirstName = "emp1",
+            //    LastName = "lemp1",
+            //    AnnualSalary = 50000
+            //};
+
+            //Console.WriteLine(fte.GetFullName());
+            //Console.WriteLine(fte.GetMonthlySalary());
+
+            //Console.WriteLine("-------");
+
+            //ContractEmp cte = new ContractEmp()
+            //{
+            //    ID = 1,
+            //    FirstName = "emp2",
+            //    LastName = "lemp2",
+            //    HourlyPay = 20,
+            //    TotalHours = 40
+            //};
+
+            //Console.WriteLine(cte.GetFullName());
+            //Console.WriteLine(cte.GetMonthlySalary());
+        }
+
+        public abstract class Customer
+        {
+            protected Customer()
             {
-                ID = 1,
-                FirstName = "emp1",
-                LastName = "lemp1",
-                AnnualSalary = 50000
-            };
+                this._id = Guid.NewGuid();
+            }
 
-            Console.WriteLine(fte.GetFullName());
-            Console.WriteLine(fte.GetMonthlySalary());
+            private Guid _id;
 
-            Console.WriteLine("-------");
-
-            ContractEmp cte = new ContractEmp()
+            public Guid ID
             {
-                ID = 1,
-                FirstName = "emp2",
-                LastName = "lemp2",
-                HourlyPay = 20,
-                TotalHours = 40
-            };
+                get
+                {
+                    return this._id;
+                }
+            }
+        }
 
-            Console.WriteLine(cte.GetFullName());
-            Console.WriteLine(cte.GetMonthlySalary());
+        public class CorporateCustomer : Customer
+        {
+            public CorporateCustomer()
+            {
+
+            }
+        }
+
+        public class SavingCustomer : Customer
+        {
+            public SavingCustomer()
+            {
+
+            }
         }
     }
 }
