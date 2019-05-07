@@ -7,11 +7,14 @@ namespace AbstractClasses
         static void Main(string[] args)
         {
 
-            CorporateCustomer CC = new CorporateCustomer();
-            Console.WriteLine(CC.ID);
+            //CorporateCustomer CC = new CorporateCustomer();
+            //Console.WriteLine(CC.ID);
+
+            //SavingCustomer SC = new SavingCustomer();
+            //Console.WriteLine(SC.ID);
 
             SavingCustomer SC = new SavingCustomer();
-            Console.WriteLine(SC.ID);
+            CorperateCustomer CC = new CorperateCustomer();
 
             Console.ReadKey();
 
@@ -43,36 +46,61 @@ namespace AbstractClasses
 
         public abstract class Customer
         {
-            protected Customer()
+            public Customer()
             {
-                this._id = Guid.NewGuid();
+                Print();
             }
 
-            private Guid _id;
-
-            public Guid ID
-            {
-                get
-                {
-                    return this._id;
-                }
-            }
-        }
-
-        public class CorporateCustomer : Customer
-        {
-            public CorporateCustomer()
-            {
-
-            }
+            public abstract void Print();
         }
 
         public class SavingCustomer : Customer
         {
-            public SavingCustomer()
+            public override void Print()
             {
-
+                Console.WriteLine("saving customer");
             }
         }
+
+        public class CorperateCustomer : Customer
+        {
+            public override void Print()
+            {
+                Console.WriteLine("Corperate customer");
+            }
+        }
+        //public abstract class Customer
+        //{
+        //    protected Customer()
+        //    {
+        //        this._id = Guid.NewGuid();
+        //    }
+
+        //    private Guid _id;
+
+        //    public Guid ID
+        //    {
+        //        get
+        //        {
+        //            return this._id;
+        //        }
+        //    }
+        //}
+
+        //public class CorporateCustomer : Customer
+        //{
+        //    public CorporateCustomer()
+        //    {
+
+        //    }
+        //}
+
+        //public class SavingCustomer : Customer
+        //{
+        //    public SavingCustomer()
+        //    {
+
+        //    }
+        //}
     }
 }
