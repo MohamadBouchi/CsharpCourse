@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursive.cs", "Recursive.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListOfObjects.cs", "ListOfObjects.cs\ListOfObjects.cs.csproj", "{FAE9AC45-D1F3-4655-A0E0-ED2007477B02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinallyBlock", "FinallyBlock\FinallyBlock.csproj", "{1F43CA0C-60AB-4B8B-B7A6-E9EF916636DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FAE9AC45-D1F3-4655-A0E0-ED2007477B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAE9AC45-D1F3-4655-A0E0-ED2007477B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAE9AC45-D1F3-4655-A0E0-ED2007477B02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F43CA0C-60AB-4B8B-B7A6-E9EF916636DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F43CA0C-60AB-4B8B-B7A6-E9EF916636DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F43CA0C-60AB-4B8B-B7A6-E9EF916636DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F43CA0C-60AB-4B8B-B7A6-E9EF916636DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
