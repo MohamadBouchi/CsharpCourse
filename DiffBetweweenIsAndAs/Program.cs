@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DiffBetweweenIsAndAs
 {
@@ -22,44 +18,64 @@ namespace DiffBetweweenIsAndAs
                 name = "Mark"
             };
 
-            if ( emp is Employee)
-            {
-                Console.WriteLine(emp.name + "is employee");
+            //Employee emp = new PermenetEmployee
+            //{
+            //    ID = 101,
+            //    name = "Mark"
+            //};
 
-                Console.ReadKey();
-            }
+            //if ( emp is Employee)
+            //{
+            //    Console.WriteLine(emp.name + "is employee");
+
+            //    Console.ReadKey();
+            //}
+            //else
+            //{
+            //    Console.WriteLine(emp.name + "is not employee");
+
+            //    Console.ReadKey();
+            //}
+
+            //if (emp is PermenetEmployee)
+            //{
+            //    Console.WriteLine(emp.name + "is PermenetEmployee");
+
+            //    Console.ReadKey();
+            //}
+            //else
+            //{
+            //    Console.WriteLine(emp.name + "is not PermenetEmployee");
+
+            //    Console.ReadKey();
+            //}
+
+            //if (emp is ContractEmployee)
+            //{
+            //    Console.WriteLine(emp.name + "is ContractEmployee");
+
+            //    Console.ReadKey();
+            //}
+            //else
+            //{
+            //    Console.WriteLine(emp.name + "is not ContractEmployee");
+
+            //    Console.ReadKey();
+            //}
+
+            PermenetEmployee permenetEmployee = emp as PermenetEmployee;
+
+            if (permenetEmployee == null)
+                Console.WriteLine("permenetEmployee is null");
             else
-            {
-                Console.WriteLine(emp.name + "is not employee");
+                Console.WriteLine("permenetEmployee is not null");
 
-                Console.ReadKey();
-            }
+            ContractEmployee contractEmployee = emp as ContractEmployee;
 
-            if (emp is PermenetEmployee)
-            {
-                Console.WriteLine(emp.name + "is PermenetEmployee");
-
-                Console.ReadKey();
-            }
+            if (contractEmployee == null)
+                Console.WriteLine("contractEmployee is null");
             else
-            {
-                Console.WriteLine(emp.name + "is not PermenetEmployee");
-
-                Console.ReadKey();
-            }
-
-            if (emp is ContractEmployee)
-            {
-                Console.WriteLine(emp.name + "is ContractEmployee");
-
-                Console.ReadKey();
-            }
-            else
-            {
-                Console.WriteLine(emp.name + "is not ContractEmployee");
-
-                Console.ReadKey();
-            }
+                Console.WriteLine("contractEmployee is not null");
         }
 
         class Employee
